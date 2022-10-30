@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test app basic html 1`] = `
+<input
+  class="inputAdd"
+  placeholder=" What needs to be done?"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`test app input test 1`] = `Promise {}`;

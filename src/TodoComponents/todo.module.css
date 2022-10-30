@@ -1,0 +1,72 @@
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.inputAdd {
+    width: 79%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.form button {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.list {
+    width: 10px auto;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 10px;
+    border-bottom: groove;
+    box-shadow: 10px 10px 5px gray;
+}
+
+.list button {
+    border: 1px solid;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.item button {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.checkbox {
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer p {
+    font-size: 20px;
+}
+
+.footer button {
+    font-size: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.active {
+    background-color: gray;
+    color:aliceblue;
+}
