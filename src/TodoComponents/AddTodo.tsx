@@ -6,7 +6,7 @@ interface AddTodoProps {
 }
 
 const AddTodo: FC<AddTodoProps> = ({onCreate}) => {
-    const [value, setValue] = useState <string>('')
+    const [value, setValue] = useState<string>('')
 
     const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -14,7 +14,6 @@ const AddTodo: FC<AddTodoProps> = ({onCreate}) => {
             onCreate(value)
             setValue('')
         }
-
     }
 
     return (

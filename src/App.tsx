@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useMemo, useState } from 'react';
 import TodoList from './TodoComponents/TodoList';
 import { ITodo } from './types/types';
 import Context, { AppContextInterface } from './context';
 import AddTodo from './TodoComponents/AddTodo';
 
 function App() {
-  const [todos, setTodos] = useState<ITodo[]> ([])
-  const [countActiveTodo, setCountActiveTodo] = useState <number>(0)
+  const [todos, setTodos] = useState<ITodo[]>([])
 
-  useEffect(()=> {
-    setCountActiveTodo (todos.reduce((sum, todo) => {if(todo.active) sum++; return sum}, 0))
+  const countActiveTodo = useMemo<number>(() => {
+    return todos.reduce((sum, todo) => {
+      if(todo.active) 
+      sum++; 
+      return sum}
+      , 0)
   }, [todos])
 
   const changeTodo: AppContextInterface = {
 
      removeTodo: (id: number) => {
-      setTodos (todos.filter(todo => todo.id !== id))
+      setTodos(todos.filter(todo => todo.id !== id))
     },
 
     toggleTodo: (id: number) => {
-      setTodos (
-        todos.map (todo => {
+      setTodos(todos.map(todo => {
           if (todo.id === id) {todo.active = !todo.active}
           return todo
         })
@@ -30,7 +31,7 @@ function App() {
   }
 
   const addTodo = (title: string) => {
-    setTodos (todos.concat([{
+    setTodos(todos.concat([{
       id: Date.now(),
       value: title,
       active: true
@@ -38,7 +39,7 @@ function App() {
   }
 
   const removeCompleted = () => {
-    setTodos (todos.filter(todo=> todo.active))
+    setTodos(todos.filter(todo => todo.active))
   }
 
   return (

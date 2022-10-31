@@ -9,4 +9,152 @@ exports[`test app basic html 1`] = `
 />
 `;
 
-exports[`test app input test 1`] = `Promise {}`;
+exports[`test app input and button test 1`] = `
+<div
+  class="list"
+  data-testid="todoList"
+>
+  <div
+    class="item"
+  >
+    <span
+      class="todoText"
+    >
+      <input
+        class="checkbox"
+        data-testid="checkbox"
+        type="checkbox"
+      />
+      test
+    </span>
+    <button>
+      ×
+    </button>
+  </div>
+  <div
+    class="footer"
+  >
+    <p>
+      1
+       items left
+    </p>
+    <div>
+      <button
+        class="active"
+        data-testid="btnAll"
+      >
+        ALL
+      </button>
+      <button
+        class=""
+        data-testid="btnAct"
+      >
+        Active
+      </button>
+      <button
+        class=""
+        data-testid="btnComp"
+      >
+        Completed
+      </button>
+    </div>
+    <button
+      data-testid="btnClearComp"
+    >
+      Clear completed
+    </button>
+  </div>
+</div>
+`;
+
+exports[`test app input and button test 2`] = `
+<div
+  class="list"
+  data-testid="todoList"
+>
+  <h1
+    class="noTodo"
+  >
+    no completed todos
+  </h1>
+  <div
+    class="footer"
+  >
+    <p>
+      1
+       items left
+    </p>
+    <div>
+      <button
+        class=""
+        data-testid="btnAll"
+      >
+        ALL
+      </button>
+      <button
+        class=""
+        data-testid="btnAct"
+      >
+        Active
+      </button>
+      <button
+        class="active"
+        data-testid="btnComp"
+      >
+        Completed
+      </button>
+    </div>
+    <button
+      data-testid="btnClearComp"
+    >
+      Clear completed
+    </button>
+  </div>
+</div>
+`;
+
+exports[`test app input and button test 3`] = `
+<div
+  class="list"
+  data-testid="todoList"
+>
+  <h1
+    class="noTodo"
+  >
+    no active todos
+  </h1>
+  <div
+    class="footer"
+  >
+    <p>
+      0
+       items left
+    </p>
+    <div>
+      <button
+        class=""
+        data-testid="btnAll"
+      >
+        ALL
+      </button>
+      <button
+        class="active"
+        data-testid="btnAct"
+      >
+        Active
+      </button>
+      <button
+        class=""
+        data-testid="btnComp"
+      >
+        Completed
+      </button>
+    </div>
+    <button
+      data-testid="btnClearComp"
+    >
+      Clear completed
+    </button>
+  </div>
+</div>
+`;

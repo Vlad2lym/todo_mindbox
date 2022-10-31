@@ -7,7 +7,7 @@ interface TodoItemProps {
     todo: ITodo,
 }
 
-const TodoItem: FC<TodoItemProps> = ({ todo }) => {
+const TodoItem: FC<TodoItemProps> = ({todo}) => {
     const {removeTodo, toggleTodo} = useContext(Context)
     const  styles = ['todoText']
 
@@ -21,6 +21,7 @@ const TodoItem: FC<TodoItemProps> = ({ todo }) => {
                 <input 
                     className={classes.checkbox}
                     type='checkbox' 
+                    data-testid='checkbox'
                     checked={!todo.active}
                     onChange={() => toggleTodo(todo.id)}
                 />
